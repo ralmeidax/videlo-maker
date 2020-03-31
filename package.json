@@ -1,0 +1,22 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "Projeto Open Source para criar vídeos automatizados Este é um projeto de estudo, orientado pelo professor Filipe Deschamps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralmeidax/video-maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralmeidax/video-maker/issues"
+  },
+  "homepage": "https://github.com/ralmeidax/video-maker#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
