@@ -6,6 +6,16 @@ File: `algorithmia.json`
 
 ```
 {
-    "apiKey": "configure in https://algorithmia.com/ "
+    "apiKey": "take your key in https://algorithmia.com/"
+}
+```
+
+## Watson Natural Language Understanding
+
+File: `watson-nlu.json`
+
+```
+{
+  "apikey": "take your key in https://cloud.ibm.com"
 }
 ```
