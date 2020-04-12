@@ -15,7 +15,7 @@ const nlu = new NaturalLanguageUnderstandingV1({
     url: "https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/430e9757-f4d0-40b0-b8fd-f665a274c6c9",
   })
 
-
+const state = require('./state.js')
   /*
 nlu.analyze({
     text:`Hi I am Michael Jackson and I like doing the moonwalk dance move`,
@@ -36,12 +36,16 @@ nlu.analyze({
 */
 
 
-async function robot(content) {
+async function robot() {
+    const content = state.load()
+
     await fetchContentFromWikipedia(content)
     sanitizeContent(content)
     breakContentIntoSentences(content)
     limitMaximumSentences(content)
     await fetchKeywordsOfAllSentences(content)
+
+    state.save(content)
 
     async function fetchContentFromWikipedia(content){
         const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
